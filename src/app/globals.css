@@ -1,0 +1,306 @@
+@import "tailwindcss";
+
+:root {
+  --primary-dark: #062B6F;
+  --primary-mid: #1E88FF;
+  --primary-light: #12C8E8;
+  --background: #ffffff;
+  --foreground: #0a0a0a;
+  --card: #ffffff;
+  --muted: #f4f6fa;
+  --muted-foreground: #6b7280;
+  --border: #e5e7eb;
+  --ring: #1E88FF;
+}
+
+.dark {
+  --background: #070d1a;
+  --foreground: #f0f4ff;
+  --card: #0e1a30;
+  --muted: #1a2540;
+  --muted-foreground: #94a3b8;
+  --border: #1e2d4a;
+  --ring: #12C8E8;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--background);
+  color: var(--foreground);
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--muted);
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #1E88FF, #12C8E8);
+  border-radius: 999px;
+}
+
+/* Gradient text utility */
+.gradient-text {
+  background: linear-gradient(135deg, #1E88FF 0%, #12C8E8 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.gradient-text-full {
+  background: linear-gradient(135deg, #062B6F 0%, #1E88FF 50%, #12C8E8 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Glass card */
+.glass {
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.glass-dark {
+  background: rgba(6, 43, 111, 0.12);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(30, 136, 255, 0.2);
+}
+
+/* Primary gradient button */
+.btn-primary {
+  background: linear-gradient(135deg, #1E88FF 0%, #12C8E8 100%);
+  color: white;
+  border: none;
+  border-radius: 12px;
+  padding: 12px 28px;
+  font-weight: 600;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 20px rgba(30, 136, 255, 0.35);
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  text-decoration: none;
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 30px rgba(30, 136, 255, 0.5);
+}
+
+.btn-secondary {
+  background: transparent;
+  color: #1E88FF;
+  border: 2px solid #1E88FF;
+  border-radius: 12px;
+  padding: 10px 28px;
+  font-weight: 600;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  text-decoration: none;
+}
+
+.btn-secondary:hover {
+  background: linear-gradient(135deg, #1E88FF 0%, #12C8E8 100%);
+  color: white;
+  border-color: transparent;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 30px rgba(30, 136, 255, 0.4);
+}
+
+/* Section heading */
+.section-heading {
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 800;
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+}
+
+.section-subheading {
+  font-size: 1.1rem;
+  color: var(--muted-foreground);
+  max-width: 600px;
+  line-height: 1.7;
+}
+
+/* Service/Portfolio card hover */
+.card-hover {
+  transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.card-hover:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 60px rgba(30, 136, 255, 0.15);
+}
+
+/* Stats counter animation */
+@keyframes countUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Floating WhatsApp button */
+.whatsapp-float {
+  position: fixed;
+  bottom: 28px;
+  right: 28px;
+  z-index: 9999;
+  background: #25D366;
+  color: white;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 24px rgba(37, 211, 102, 0.5);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-decoration: none;
+}
+
+.whatsapp-float:hover {
+  transform: scale(1.1) translateY(-3px);
+  box-shadow: 0 8px 32px rgba(37, 211, 102, 0.65);
+}
+
+/* Animated gradient background */
+.hero-gradient {
+  background: linear-gradient(135deg, #062B6F 0%, #0a3d8f 30%, #1E88FF 70%, #12C8E8 100%);
+}
+
+.hero-gradient-subtle {
+  background: linear-gradient(160deg, #f0f7ff 0%, #e8f4ff 50%, #f0fbff 100%);
+}
+
+.dark .hero-gradient-subtle {
+  background: linear-gradient(160deg, #070d1a 0%, #0d1a35 50%, #071520 100%);
+}
+
+/* Mesh/grid background */
+.mesh-bg {
+  background-image:
+    radial-gradient(circle at 25% 25%, rgba(30, 136, 255, 0.08) 0%, transparent 50%),
+    radial-gradient(circle at 75% 75%, rgba(18, 200, 232, 0.08) 0%, transparent 50%);
+}
+
+/* Input styles */
+.input-field {
+  width: 100%;
+  padding: 12px 16px;
+  border: 1.5px solid var(--border);
+  border-radius: 10px;
+  background: var(--card);
+  color: var(--foreground);
+  font-size: 0.95rem;
+  transition: all 0.25s ease;
+  outline: none;
+  font-family: inherit;
+}
+
+.input-field:focus {
+  border-color: #1E88FF;
+  box-shadow: 0 0 0 3px rgba(30, 136, 255, 0.12);
+}
+
+.input-field::placeholder {
+  color: var(--muted-foreground);
+}
+
+/* Badge */
+.badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 4px 12px;
+  border-radius: 999px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.badge-primary {
+  background: rgba(30, 136, 255, 0.12);
+  color: #1E88FF;
+  border: 1px solid rgba(30, 136, 255, 0.25);
+}
+
+/* Navigation */
+.nav-link {
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: var(--foreground);
+  text-decoration: none;
+  position: relative;
+  transition: color 0.25s;
+  padding: 4px 0;
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: linear-gradient(90deg, #1E88FF, #12C8E8);
+  border-radius: 999px;
+  transition: width 0.3s ease;
+}
+
+.nav-link:hover::after,
+.nav-link.active::after {
+  width: 100%;
+}
+
+.nav-link:hover {
+  color: #1E88FF;
+}
+
+/* Container */
+.container-xl {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* Section padding */
+.section-py {
+  padding: 96px 0;
+}
+
+@media (max-width: 768px) {
+  .section-py {
+    padding: 64px 0;
+  }
+}
