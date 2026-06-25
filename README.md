@@ -1,36 +1,235 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+PrimeLink Technologies
 
-## Getting Started
+![PrimeLink Technologies](public/logo.png)
 
-First, run the development server:
+PrimeLink Technologies is a modern technology solutions company specializing in software development, web applications, e-commerce solutions, networking infrastructure, cloud services, cybersecurity, and digital transformation.
+
+This platform serves as the official company website and project request portal, allowing clients to explore services, view pricing, and submit project requirements directly to the PrimeLink team.
+
+---
+🚀 Features
+
+Website Development
+
+* Portfolio Websites
+* Business Websites
+* Corporate Websites
+* Landing Pages
+
+E-Commerce Solutions
+
+* Starter Online Stores
+* Business Online Stores
+* Enterprise E-Commerce Platforms
+
+Custom Software Development
+
+* School Management Systems
+* Hospital Management Systems
+* Insurance Systems
+* ERP Solutions
+* CRM Systems
+* SaaS Platforms
+
+Mobile Applications
+
+* Android Development
+* iOS Development
+* Cross-Platform Applications
+
+Networking & ISP Solutions
+
+* Mikrotik Configuration
+* Hotspot Systems
+* PPPoE Deployment
+* Network Monitoring
+* ISP Infrastructure
+
+Cloud & Cybersecurity
+
+* Cloud Deployment
+* VPS Management
+* Security Audits
+* Server Administration
+  
+🛠 Tech Stack
+
+* Next.js 15
+* TypeScript
+* Tailwind CSS
+* Shadcn UI
+* Framer Motion
+* Lucide React
+* Resend Email API
+* Cloudflare Turnstile
+* Upstash Redis
+* Upstash QStash
+* Google Sheets API
+* Vercel
+
+📂 Project Structure
+
+```bash
+src/
+├── app/
+│   ├── page.tsx
+│   ├── services/
+│   ├── portfolio/
+│   ├── pricing/
+│   ├── about/
+│   ├── contact/
+│   └── request-project/
+│
+├── components/
+│   ├── Navbar.tsx
+│   ├── Hero.tsx
+│   ├── Services.tsx
+│   ├── Portfolio.tsx
+│   ├── Pricing.tsx
+│   ├── Contact.tsx
+│   └── Footer.tsx
+│
+├── lib/
+├── hooks/
+├── types/
+└── utils/
+```
+
+ Getting Started
+
+Clone the repository:
+
+```bash
+git clone <repository-url>
+cd primelink-technologies
+```
+
+Install dependencies:
+
+```bash
+npm install
+```
+
+Run the development server:
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```text
+http://localhost:3000
+```
+🔐 Environment Variables
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Create a `.env.local` file:
 
-## Learn More
+```env
+RESEND_API_KEY=
 
-To learn more about Next.js, take a look at the following resources:
+UPSTASH_REDIS_REST_URL=
+UPSTASH_REDIS_REST_TOKEN=
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+QSTASH_TOKEN=
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+GOOGLE_CLIENT_EMAIL=
+GOOGLE_PRIVATE_KEY=
+GOOGLE_SHEET_ID=
 
-## Deploy on Vercel
+TURNSTILE_SECRET_KEY=
+TURNSTILE_SITE_KEY=
+```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+---
+📨 Lead Management Workflow
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Project Request Form
+↓
+Cloudflare Turnstile Verification
+↓
+Upstash Redis Rate Limiting
+↓
+QStash Queue
+↓
+Google Sheets Storage
+↓
+Email Notification via Resend
+↓
+PrimeLink Team Review
+
+No traditional database is required.
+
+---
+💰 Pricing
+
+Website Development
+
+| Service           | Price |
+| ----------------- | ----- |
+| Portfolio Website | $200  |
+| Business Website  | $400  |
+| Corporate Website | $700  |
+| Landing Page      | $150  |
+
+E-Commerce Solutions
+
+| Package          | Price |
+| ---------------- | ----- |
+| Starter Store    | $1000 |
+| Business Store   | $1250 |
+| Enterprise Store | $2550 |
+
+Custom software projects are quoted based on project requirements.
+
+---
+
+📞 Contact Information
+
+PrimeLink Technologies
+
+Phone:
+
+* 0729596966
+* 0113697897
+
+Email:
+
+* [info@primelink.co.ke](mailto:info@primelink.co.ke)
+
+Website:
+
+* [www.primelink.co.ke](http://www.primelink.co.ke)
+
+---
+
+🎯 Mission
+
+Connecting Innovation, Empowering Business.
+
+PrimeLink Technologies delivers scalable digital solutions that help businesses grow through technology, automation, and innovation.
+
+---
+
+🚀 Deployment
+
+The application is optimized for deployment on Vercel.
+
+Build:
+
+```bash
+npm run build
+```
+
+Start:
+
+```bash
+npm start
+```
+
+Deploy directly through Vercel for automatic CI/CD and global edge delivery.
+
+---
+📄 License
+
+© 2026 PrimeLink Technologies. All Rights Reserved.
